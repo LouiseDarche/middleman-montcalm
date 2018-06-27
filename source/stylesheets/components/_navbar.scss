@@ -1,50 +1,59 @@
 /* Main navbar */
-.navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
-  transition: all 0.3s ease;
-  height: 70px;
-  padding: 0px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+
+.navbar-wagon-item a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: lighter;
+  color: $light-gray;
+  margin-right: 20px;
+  text-transform: uppercase;
 }
 
-/* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
+.navbar-wagon-item a:hover {
+ cursor:pointer;
+ text-decoration: none;
+ border-bottom: 1px solid;
 }
 
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+
+.links a {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
-/* Right section */
-.navbar-wagon-right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#facebook {
+  border: solid 2px;
+      padding: 6px 7px 4px 11px;
+      border-radius: 50%;
 }
 
-/* Basic navbar item */
-.navbar-wagon-item {
-  cursor: pointer;
-  padding: 0 20px;
+#instagram {
+      border: solid 2px;
+    padding: 6px 7px 4px 7px;
+    border-radius: 50%;
 }
-
-/* Navbar link */
-.navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
-}
-.navbar-wagon-link:hover {
-  color: #da552f;
+.links a:hover {
+  cursor:pointer;
   text-decoration: none;
 }
 
+.navbar-wagon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar-wagon span {
+      margin-top: 10px;
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 1px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.3);
+}
 /* Dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
