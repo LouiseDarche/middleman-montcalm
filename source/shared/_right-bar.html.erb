@@ -1,0 +1,42 @@
+
+
+<div class="right-image right-side" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/fond-2.jpg)">
+</div>
+
+
+<div class="right-about right-side not-visible">
+  <h1>à propos du montcalm</h1>
+  <div>
+    <p>Installés au bas de la Butte Montmartre, William et Guillaume accueillent leur clientèle sur fonds de hip hop pour un moment convivial et sans prétention. </p>
+    <p>La carte courte qui change tous les jours, au gré des arrivages de Rungis et des inspirations de William.</p>
+    <p>Côté cave, Guillaume déniche des petits vignerons qu’il se fait un devoir de faire découvrir aux gourmands qui franchissent la porte.</p>
+    <h3>Un bon coup de fourchette,
+      un solide jeté de coude
+      ou les deux !</h3>
+  </div>
+  <div class="row">
+    <div class="images">
+      <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo1.png)"></div>
+      <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo2.png)"></div>
+      <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo3.png)"></div>
+        <!-- <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo4.JPG)"></div>
+        <div class="right-photo col-xs-12 col-md-4"  style="background-image: url(images/section2-photo5.jpg)"></div>
+        <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo6.png)"></div> -->
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function toggleRightSide(event) {
+    const rightImage = document.querySelector(".right-image");
+    const rightAbout = document.querySelector(".right-about");
+    rightImage.classList.toggle("not-visible");
+    rightAbout.classList.toggle("not-visible");
+    // console.log(event);
+  }
+
+  const aboutLink = document.getElementById("about-link");
+
+  aboutLink.addEventListener("click", toggleRightSide)
+</script>
