@@ -18,6 +18,7 @@
 
   .not-visible {
     visibility: hidden;
+    height: 0;
   }
 
   .right-about {
@@ -65,7 +66,7 @@
   // left-bar
   .banner-element {
     text-align: center;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.9);
     width: 30%;
     position: sticky;
     left: 0;
@@ -82,10 +83,10 @@
     }
 
     .links {
-      margin-right: auto;
+      // margin-right: auto;
       margin-bottom: 5px;
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
       width: 52px;
     }
   }
@@ -117,15 +118,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20%;
   }
 
   .banner-element  img {
-      margin-bottom: 15px;
-    }
+    margin: 11px;
+  }
 
   .presentation {
-    margin-top: 4%;
-      margin-bottom: 10%;
+    // margin-top: 10%%;
+    // margin-bottom: 10%;
   }
 
   .presentation p {
@@ -134,10 +136,20 @@
   }
 
   #opening-info {
-    color: #005952;
     overflow-wrap: break-word;
     margin: auto;
-    padding: 20px;
+    padding: 0% 10%;
+    margin-top: 10px;
+  }
+
+  .information a {
+    padding: 10px;
+    /* background-color: white; */
+    margin: 10px;
+    color: white;
+    text-decoration: underline;
+    font-weight: lighter;
+    margin-bottom: 20px;
   }
 
   .information {
@@ -148,14 +160,14 @@
     width: 50%;
   }
 
-  #messenger {
-    width: 60%;
-  }
+  // #messenger {
+  //   width: 60%;
+  // }
 
-  #about-link {
-    text-decoration: none;
-    color: #005962;
-  }
+  // #about-link {
+  //   text-decoration: none;
+  //   color: #005962;
+  // }
   // about page
 
   #section2 {
@@ -187,6 +199,31 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin: 10px;
+  }
+
+  .green {
+    color: $green;
+  }
+
+  .white {
+    color: $white;
+    font-weight: lighter;
+  }
+
+  .green-line {
+    border: solid #005952 1px;
+    width: 150px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .smaller {
+    font-size: 14px;
+    overflow-wrap: break-word;
+  }
+
+  .bigger {
+    font-size: 20px;
   }
 
   // // about page
