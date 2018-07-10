@@ -1,1 +1,2 @@
-image
+const imagesUrl = ["images/IMG_5239.jpg", "images/IMG_5251.jpg", "images/IMG_5263.jpg", "images/IMG_5313.jpg", "images/IMG_5327.jpg", "images/IMG_5403.jpg", "images/IMG_5410.jpg", "images/IMG_5450.jpg", "images/IMG_5454.jpg", "images/IMG_5459.jpg", "images/IMG_5499.jpg"]
+const imagesWithoutImages = ["IMG_5239.jpg", "IMG_5251.jpg", "IMG_5263.jpg", "IMG_5313.jpg", "IMG_5327.jpg", "IMG_5403.jpg", "IMG_5410.jpg", "IMG_5450.jpg", "IMG_5454.jpg", "IMG_5459.jpg", "IMG_5499.jpg"]
