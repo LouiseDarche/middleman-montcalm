@@ -1,6 +1,6 @@
 
 
-<div class="right-image right-side" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/fond-2.jpg)">
+<div class="right-image right-side" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5239.jpg)">
 </div>
 
 
@@ -24,20 +24,26 @@
 </div> -->
 
 <script>
-  let imageId = 0;
+  const images = ["IMG_5239.jpg", "IMG_5251.jpg", "IMG_5263.jpg", "IMG_5313.jpg", "IMG_5327.jpg", "IMG_5403.jpg", "IMG_5410.jpg", "IMG_5450.jpg", "IMG_5454.jpg", "IMG_5459.jpg", "IMG_5499.jpg"]
   function changeWrapper() {
-    if(!imageId){
-      document.querySelector(".right-image").style.backgroundImage = "linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/fond-1-full.jpg";
-      imageId++;
+    const image = document.querySelector(".right-image");
+    for(i = 0; i <= images.length - 1; i++) {
+    //   document.querySelector(".right-image").style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url('${images[i]}')`;
+    console.log(images[i]);
     }
-    else if (imageId == 1){
-      document.querySelector(".right-image").style.backgroundImage = "linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/fond-2.jpg";
-      imageId++;
-    }
-    else if(imageId == 2){
-      document.querySelector(".right-image").style.backgroundImage = "linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/fond-3.jpg";
-      imageId = 0;
-    }
+
+    // if(!imageId){
+    //   document.querySelector(".right-image").style.backgroundImage = "linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5239.jpg";
+    //   imageId++;
+    // }
+    // else if (imageId == 1){
+    //   document.querySelector(".right-image").style.backgroundImage = "linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5251.jpg";
+    //   imageId++;
+    // }
+    // else if(imageId == 2){
+    //   document.querySelector(".right-image").style.backgroundImage = "linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/fond-3.jpg";
+    //   imageId = 0;
+    // }
   }
   window.setInterval(changeWrapper, 3000);
 
