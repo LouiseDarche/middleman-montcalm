@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Montcalm restaurant - Cuisine & cave à vins - Paris 18ème</title>
-    <link href="stylesheets/application-a9dc9f06.css" rel="stylesheet" />
+    <link href="stylesheets/application-27e53147.css" rel="stylesheet" />
     <script src="javascripts/application-511f450a.js"></script>
     <link href="images/favicon-a96cde0d.jpg" rel="icon" type="image/jpg" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -30,8 +30,8 @@
         <p class="white">21 rue Montcalm 75018 Paris</p>
         <p class="white" id="opening-info">ouvert du mardi au samedi, midi et soir</p>
       </div>
-      <div class="green-line"></div>
-      <div class=information>
+      <div class="green-line hidden-on-mobile"></div>
+      <div class="information hidden-on-mobile">
         <p class="white bigger">réservations :</p>
         <p class="green smaller">( 10h - 16h // 19h - 23h )</p>
         <p class="white">01 42 58 71 35</p>
@@ -39,13 +39,13 @@
           ou par Facebook
         </a>
       </div>
-      <div class="green-line"></div>
-      <div class="links">
-        <a href="https://www.facebook.com/pg/montcalmrestaurant/" id="facebook" target="_blank">
+      <div class="green-line hidden-on-mobile"></div>
+      <div class="links hidden-on-mobile">
+        <a href="https://www.facebook.com/pg/montcalmrestaurant/" class= "hidden-on-mobile" id="facebook" target="_blank">
           <!-- <i class="fab fa-facebook-f"></i> -->
           <img src="images/facebook-blanc-0e8f42ce.png" height="40" alt="Facebook blanc" />
         </a>
-        <a href="https://www.instagram.com/montcalm_restaurant/" id="instagram" target="_blank">
+        <a href="https://www.instagram.com/montcalm_restaurant/" class= "hidden-on-mobile" id="instagram" target="_blank">
           <img src="images/instagram-blanc-703654c9.png" height="40" alt="Instagram blanc" />
           <!-- <i class="fab fa-instagram"></i> -->
         </a>
@@ -58,26 +58,6 @@
 <div class="right-image right-side" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5239-02c0a975.jpg)">
 </div>
 
-
-<!-- <div class="right-about right-side not-visible">
-  <h1>à propos du montcalm</h1>
-  <div>
-    <p>Installés au bas de la Butte Montmartre, William et Guillaume accueillent leur clientèle sur fonds de hip hop pour un moment convivial et sans prétention. </p>
-    <p>La carte courte qui change tous les jours, au gré des arrivages de Rungis et des inspirations de William.</p>
-    <p>Côté cave, Guillaume déniche des petits vignerons qu’il se fait un devoir de faire découvrir aux gourmands qui franchissent la porte.</p>
-    <h3>Un bon coup de fourchette,
-      un solide jeté de coude
-      ou les deux !</h3>
-  </div>
-  <div class="row">
-    <div class="images">
-      <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo1.png)"></div>
-      <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo2.png)"></div>
-      <div class="right-photo col-xs-12 col-md-4" style="background-image: url(images/section2-photo3.png)"></div>
-    </div>
-  </div>
-</div> -->
-
 <script>
   let imageId = 0;
   const images = ["images/IMG_5239-02c0a975.jpg", "images/IMG_5251-7f707bec.jpg", "images/IMG_5263-68b6e272.jpg", "images/IMG_5313.jpg", "images/IMG_5327-2a04023a.jpg", "images/IMG_5403-d1eee3f1.jpg", "images/IMG_5410-7871ea93.jpg", "images/IMG_5450-4409e015.jpg", "images/IMG_5454-335fd15a.jpg", "images/IMG_5459-bb9d49b5.jpg", "images/IMG_5499-fdf5a006.jpg"]
@@ -86,15 +66,13 @@
     if(imageId < images.length - 1){
       imageBackground.style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(${images[imageId]})`;
       imageId++;
-      console.log(imageId);
-      console.log(images[imageId]);
     }
     else if (imageId == images.length - 1){
       document.querySelector(".right-image").style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(${images[imageId]})`
       imageId = 0;
     }
   }
-  window.setInterval(changeWrapper, 3000);
+  window.setInterval(changeWrapper, 4000);
 
   // function toggleRightSide(event) {
   //   const rightImage = document.querySelector(".right-image");
