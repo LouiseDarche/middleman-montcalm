@@ -1,0 +1,53 @@
+<ul id="slides">
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5251.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5263.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5327.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5389.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5450.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5454.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5471.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5459_big.jpg)"></li>
+
+</ul>
+<div class="banner-element hidden-on-desktop">
+  <div class=information>
+    <p class="white bigger">réservations :</p>
+    <p class="green smaller">( 10h - 16h // 19h - 23h )</p>
+    <p class="white">01 42 58 71 35</p>
+    <a href="https://m.me/montcalmrestaurant">
+      ou par Facebook
+    </a>
+  </div>
+  <div class="green-line"></div>
+  <div class="links">
+    <a href="https://www.facebook.com/pg/montcalmrestaurant/" id="facebook" target="_blank">
+      <!-- <i class="fab fa-facebook-f"></i> -->
+      <%= image_tag('facebook-blanc.png', height: 40) %>
+    </a>
+    <a href="https://www.instagram.com/montcalm_restaurant/" id="instagram" target="_blank">
+      <%= image_tag('instagram-blanc.png', height: 40) %>
+      <!-- <i class="fab fa-instagram"></i> -->
+    </a>
+  </div>
+</div>
+
+
+<script>
+  var slides = document.querySelectorAll('#slides .slide');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide,2000);
+
+  function nextSlide() {
+      slides[currentSlide].className = 'slide';
+      currentSlide = (currentSlide+1)%slides.length;
+      slides[currentSlide].className = 'slide showing';
+  }
+</script>
+  <!-- <li class="slide"><%#= image_tag ("IMG_5251.jpg") %></li>
+  <li class="slide"><%#= image_tag ("IMG_5263.jpg") %></li>
+  <li class="slide"><%#= image_tag ("IMG_5327.jpg") %></li>
+  <li class="slide"><%#= image_tag ("IMG_5389.jpg") %></li>
+  <li class="slide"><%#= image_tag ("IMG_5450.jpg") %></li>
+  <li class="slide"><%#= image_tag ("IMG_5454.jpg") %></li>
+  <li class="slide"><%#= image_tag ("IMG_5471.jpg") %></li>
+  <li class="slide"><%#= image_tag ("IMG_5459_big.jpg") %></li> -->
