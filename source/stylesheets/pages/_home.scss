@@ -56,6 +56,7 @@
     height: 0;
     margin: 0;
   }
+
   .banner-element {
     text-align: center;
     background-color: $black;
@@ -193,9 +194,9 @@
   // left-bar
   .not-visible {
     visibility: hidden;
+    display: none;
     height: 0;
     margin: 0;
-    width: 0;
   }
 
 
@@ -384,5 +385,16 @@
   .showing {
       opacity: 1;
       z-index: 2;
+  }
+
+  #hidden-on-desktop {
+    position: relative;
+  }
+
+  .fb-page {
+    position: absolute !important;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
   }
 }
