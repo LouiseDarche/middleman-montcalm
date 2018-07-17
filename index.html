@@ -7,14 +7,14 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Montcalm restaurant - Cuisine & cave à vins - Paris 18ème</title>
-    <link href="stylesheets/application-27e53147.css" rel="stylesheet" />
+    <link href="stylesheets/application-c6c81980.css" rel="stylesheet" />
     <script src="javascripts/application-511f450a.js"></script>
     <link href="images/favicon-a96cde0d.jpg" rel="icon" type="image/jpg" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
   <body>
-    <div class="full-page">
-    <div class="banner-element">
+    <div class="full-page-about">
+  <div class="banner-element">
   <!-- <div class="banner-content"> -->
     <h1 class="not-visible">Montcalm, cuisine et cave à vins - Paris 18ème</h1>
     <div class="central-part">
@@ -35,9 +35,15 @@
         <p class="white bigger">réservations :</p>
         <p class="green smaller">( 10h - 16h // 19h - 23h )</p>
         <p class="white">01 42 58 71 35</p>
-        <a href="https://m.me/montcalmrestaurant">
+        <a href="#" id="fb-msg">
           ou par Facebook
         </a>
+      </div>
+      <div class="green-line hidden-on-mobile"></div>
+      <div class="about-us hidden-on-mobile">
+        <p class="white bigger">Ils parlent de nous</p>
+        <a href="https://restaurant.michelin.fr/3615756/montcalm-paris-18"><img alt="Montcalm restaurant - Guide Michelin 2018" src="images/guide-michelin-b2e8977b.jpg" class="small-image"/></a>
+        <a href="http://www.lebey.com/fr/les-adresses/bistrot/montcalm"><img alt="Montcalm restaurant - Guide Lebey 2018" src="images/guide-lebey-f3a38242.jpeg" class="small-image"/></a>
       </div>
       <div class="green-line hidden-on-mobile"></div>
       <div class="links hidden-on-mobile">
@@ -53,38 +59,98 @@
     </div>
 </div>
 
-    
 
-<div class="right-image right-side" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5239-02c0a975.jpg)">
+  <ul id="slides">
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5251-7f707bec.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5263-68b6e272.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5327-2a04023a.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5389-dcdeea0f.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5450-4409e015.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5454-335fd15a.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5471-ea34acdc.jpg)"></li>
+  <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5459_big-6ff52c4e.jpg)"></li>
+</ul>
+<div class="banner-element" id="hidden-on-desktop">
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId : '95100348886',
+        xfbml : true,
+        version : 'v2.6'
+      });
+    };
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="not-visible" id="facebook-box">
+    <div class="fb-page not-visible"
+    data-href="https://www.facebook.com/montcalmrestaurant/"
+    data-tabs="messages"
+    data-width="400"
+    data-height="300"
+    data-small-header="true">
+      <div class="fb-xfbml-parse-ignore">
+        <blockquote></blockquote>
+      </div>
+    </div>
+  </div>
+  <div class=information>
+    <p class="white bigger">réservations :</p>
+    <p class="green smaller">( 10h - 16h // 19h - 23h )</p>
+    <p class="white">01 42 58 71 35</p>
+    <a href="https://m.me/montcalmrestaurant" id="fb-msg-mobile">
+      ou par Facebook
+    </a>
+  </div>
+  <div class="green-line"></div>
+  <div class="links">
+    <a href="https://www.facebook.com/pg/montcalmrestaurant/" id="facebook" target="_blank">
+      <!-- <i class="fab fa-facebook-f"></i> -->
+      <img src="images/facebook-blanc-0e8f42ce.png" height="40" alt="Facebook blanc" />
+    </a>
+    <a href="https://www.instagram.com/montcalm_restaurant/" id="instagram" target="_blank">
+      <img src="images/instagram-blanc-703654c9.png" height="40" alt="Instagram blanc" />
+      <!-- <i class="fab fa-instagram"></i> -->
+    </a>
+  </div>
+  <div class="green-line"></div>
+  <div class="about-us">
+    <p class="white bigger">Ils parlent de nous</p>
+    <a href="https://restaurant.michelin.fr/3615756/montcalm-paris-18"><img alt="Montcalm restaurant - Guide Michelin 2018" src="images/guide-michelin-b2e8977b.jpg" class="small-image"/></a>
+    <a href="http://www.lebey.com/fr/les-adresses/bistrot/montcalm"><img alt="Montcalm restaurant - Guide Lebey 2018" src="images/guide-lebey-f3a38242.jpeg" class="small-image"/></a>
+  </div>
 </div>
 
+<!-- https://m.me/montcalmrestaurant -->
+
 <script>
-  let imageId = 0;
-  const images = ["images/IMG_5239-02c0a975.jpg", "images/IMG_5251-7f707bec.jpg", "images/IMG_5263-68b6e272.jpg", "images/IMG_5313.jpg", "images/IMG_5327-2a04023a.jpg", "images/IMG_5403-d1eee3f1.jpg", "images/IMG_5410-7871ea93.jpg", "images/IMG_5450-4409e015.jpg", "images/IMG_5454-335fd15a.jpg", "images/IMG_5459-bb9d49b5.jpg", "images/IMG_5499-fdf5a006.jpg"]
-  function changeWrapper() {
-    const imageBackground = document.querySelector(".right-image")
-    if(imageId < images.length - 1){
-      imageBackground.style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(${images[imageId]})`;
-      imageId++;
-    }
-    else if (imageId == images.length - 1){
-      document.querySelector(".right-image").style.backgroundImage = `linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(${images[imageId]})`
-      imageId = 0;
-    }
+  var slides = document.querySelectorAll('#slides .slide');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide,2000);
+
+  function nextSlide() {
+      slides[currentSlide].className = 'slide';
+      currentSlide = (currentSlide+1)%slides.length;
+      slides[currentSlide].className = 'slide showing';
   }
-  window.setInterval(changeWrapper, 4000);
 
-  // function toggleRightSide(event) {
-  //   const rightImage = document.querySelector(".right-image");
-  //   const rightAbout = document.querySelector(".right-about");
-  //   rightImage.classList.toggle("not-visible");
-  //   rightAbout.classList.toggle("not-visible");
-  //   // console.log(event);
-  // }
+  const fbButton = document.getElementById("fb-msg");
+  // const fbButtonMobile = document.getElementById("fb-msg-mobile");
+  const fbBox = document.querySelector(".fb-page");
+  const fbDiv = document.getElementById("facebook-box");
+  fbButton.addEventListener("click", appearTextBox);
+  // fbButtonMobile.addEventListener("click", appearTextBox);
 
-  // const aboutLink = document.getElementById("about-link");
-
-  // aboutLink.addEventListener("click", toggleRightSide)
+  function appearTextBox(e) {
+    fbBox.classList.toggle("not-visible");
+    fbDiv.classList.toggle("not-visible");
+    console.log(fbDiv.classList);
+  }
 </script>
 
 

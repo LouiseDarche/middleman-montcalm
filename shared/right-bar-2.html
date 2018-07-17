@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title></title>
-    <link href="../stylesheets/application-27e53147.css" rel="stylesheet" />
+    <link href="../stylesheets/application-c6c81980.css" rel="stylesheet" />
     <script src="../javascripts/application-511f450a.js"></script>
     <link href="../images/favicon-a96cde0d.jpg" rel="icon" type="image/jpg" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -22,14 +22,41 @@
   <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5454.jpg)"></li>
   <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5471.jpg)"></li>
   <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5459_big.jpg)"></li>
-
 </ul>
-<div class="banner-element hidden-on-desktop">
+<div class="banner-element" id="hidden-on-desktop">
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId : '95100348886',
+        xfbml : true,
+        version : 'v2.6'
+      });
+    };
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="not-visible" id="facebook-box">
+    <div class="fb-page not-visible"
+    data-href="https://www.facebook.com/montcalmrestaurant/"
+    data-tabs="messages"
+    data-width="400"
+    data-height="300"
+    data-small-header="true">
+      <div class="fb-xfbml-parse-ignore">
+        <blockquote></blockquote>
+      </div>
+    </div>
+  </div>
   <div class=information>
     <p class="white bigger">réservations :</p>
     <p class="green smaller">( 10h - 16h // 19h - 23h )</p>
     <p class="white">01 42 58 71 35</p>
-    <a href="https://m.me/montcalmrestaurant">
+    <a href="https://m.me/montcalmrestaurant" id="fb-msg-mobile">
       ou par Facebook
     </a>
   </div>
@@ -44,8 +71,15 @@
       <!-- <i class="fab fa-instagram"></i> -->
     </a>
   </div>
+  <div class="green-line"></div>
+  <div class="about-us">
+    <p class="white bigger">Ils parlent de nous</p>
+    <a href="https://restaurant.michelin.fr/3615756/montcalm-paris-18"><img alt="Montcalm restaurant - Guide Michelin 2018" src="images/guide-michelin.jpg" class="small-image"/></a>
+    <a href="http://www.lebey.com/fr/les-adresses/bistrot/montcalm"><img alt="Montcalm restaurant - Guide Lebey 2018" src="images/guide-lebey.jpeg" class="small-image"/></a>
+  </div>
 </div>
 
+<!-- https://m.me/montcalmrestaurant -->
 
 <script>
   var slides = document.querySelectorAll('#slides .slide');
@@ -57,15 +91,21 @@
       currentSlide = (currentSlide+1)%slides.length;
       slides[currentSlide].className = 'slide showing';
   }
+
+  const fbButton = document.getElementById("fb-msg");
+  // const fbButtonMobile = document.getElementById("fb-msg-mobile");
+  const fbBox = document.querySelector(".fb-page");
+  const fbDiv = document.getElementById("facebook-box");
+  fbButton.addEventListener("click", appearTextBox);
+  // fbButtonMobile.addEventListener("click", appearTextBox);
+
+  function appearTextBox(e) {
+    fbBox.classList.toggle("not-visible");
+    fbDiv.classList.toggle("not-visible");
+    console.log(fbDiv.classList);
+  }
 </script>
-  <!-- <li class="slide"></li>
-  <li class="slide"></li>
-  <li class="slide"></li>
-  <li class="slide"></li>
-  <li class="slide"></li>
-  <li class="slide"></li>
-  <li class="slide"></li>
-  <li class="slide"></li> -->
+
 
   </body>
 </html>
