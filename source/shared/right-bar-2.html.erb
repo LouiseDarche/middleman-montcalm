@@ -7,14 +7,41 @@
   <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5454.jpg)"></li>
   <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5471.jpg)"></li>
   <li class="slide" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%), url(images/IMG_5459_big.jpg)"></li>
-
 </ul>
-<div class="banner-element hidden-on-desktop">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId : '95100348886',
+      xfbml : true,
+      version : 'v2.6'
+    });
+  };
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="not-visible" id="facebook-box">
+  <div class="fb-page not-visible"
+  data-href="https://www.facebook.com/montcalmrestaurant/"
+  data-tabs="messages"
+  data-width="400"
+  data-height="300"
+  data-small-header="true">
+    <div class="fb-xfbml-parse-ignore">
+      <blockquote></blockquote>
+    </div>
+  </div>
+</div>
+<div class="banner-element" id="hidden-on-desktop">
   <div class=information>
     <p class="white bigger">réservations :</p>
     <p class="green smaller">( 10h - 16h // 19h - 23h )</p>
     <p class="white">01 42 58 71 35</p>
-    <a href="https://m.me/montcalmrestaurant">
+    <a href="#" id="fb-msg">
       ou par Facebook
     </a>
   </div>
@@ -37,6 +64,7 @@
   </div>
 </div>
 
+<!-- https://m.me/montcalmrestaurant -->
 
 <script>
   var slides = document.querySelectorAll('#slides .slide');
@@ -48,12 +76,15 @@
       currentSlide = (currentSlide+1)%slides.length;
       slides[currentSlide].className = 'slide showing';
   }
+
+  const fbButton = document.getElementById("fb-msg");
+  const fbBox = document.querySelector(".fb-page");
+  const fbDiv = document.getElementById("facebook-box");
+  fbButton.addEventListener("click", appearTextBox);
+
+  function appearTextBox(e) {
+    fbBox.classList.toggle("not-visible");
+    fbDiv.classList.toggle("not-visible");
+  }
 </script>
-  <!-- <li class="slide"><%#= image_tag ("IMG_5251.jpg") %></li>
-  <li class="slide"><%#= image_tag ("IMG_5263.jpg") %></li>
-  <li class="slide"><%#= image_tag ("IMG_5327.jpg") %></li>
-  <li class="slide"><%#= image_tag ("IMG_5389.jpg") %></li>
-  <li class="slide"><%#= image_tag ("IMG_5450.jpg") %></li>
-  <li class="slide"><%#= image_tag ("IMG_5454.jpg") %></li>
-  <li class="slide"><%#= image_tag ("IMG_5471.jpg") %></li>
-  <li class="slide"><%#= image_tag ("IMG_5459_big.jpg") %></li> -->
+
