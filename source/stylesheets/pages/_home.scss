@@ -216,7 +216,8 @@
 
   .banner-element {
     text-align: center;
-    background-color: $black;
+    background-color: $green;
+    // background-color: $black;
     padding: 30px;
     display: flex;
     flex-direction: column-reverse;
@@ -410,5 +411,17 @@
     right: 0;
     z-index: 1;
     bottom: 0;
+  }
+
+  .white-line {
+    border: solid $white 1px;
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: rgba(0,0,0,0.7) 1px 1px 1px;
+  }
+
+  .shadow {
+    text-shadow: $black 1px 1px 1px;
   }
 }
