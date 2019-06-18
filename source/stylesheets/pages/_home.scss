@@ -57,6 +57,16 @@
     margin: 0;
   }
 
+  .flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .minor-information {
+  //   font-size: 14px;
+  // }
+
   .banner-element {
     text-align: center;
     background-color: $green;
@@ -65,7 +75,7 @@
     position: sticky;
     left: 0;
     height: 100vh;
-    padding: 30px;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,29 +102,34 @@
     margin-top: auto;
   }
 
-  .banner-element img {
-    margin: 11px;
+  #logo {
+    margin: 0 11px 11px 11px;
   }
 
   .presentation p {
     margin: 0;
-    font-size: 21px;
+    // font-size: 21px;
   }
 
-  #opening-info {
+  .opening-info {
     overflow-wrap: break-word;
     margin: auto;
-    padding: 0% 10%;
-    margin-top: 10px;
+    // padding: 0% 10%;
+    // margin-top: 10px;
   }
 
-  .information a {
+  #fb-msg {
     background: white;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 3px 7px;
     color: $green;
     font-weight: lighter;
-    box-shadow: $black 1px 1px 5px;
+    box-shadow: rgba(0,0,0,0.60) 1px 1px 5px;
+
+    &:hover {
+      padding: 6px 14px;
+      transition-duration: 0.05s;
+    }
   }
 
   .information {
@@ -132,6 +147,14 @@
 
   .shadow {
     text-shadow: $black 1px 1px 1px;
+  }
+
+  .no-bottom-margin {
+    // margin-bottom: 0;
+  }
+
+  #under-fb-link {
+    margin-top: 10%;
   }
 
   .green-line {
@@ -152,10 +175,11 @@
   .smaller {
     font-size: 14px;
     overflow-wrap: break-word;
+    margin-bottom: 0;
   }
 
   .bigger {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   p.bigger {
@@ -163,9 +187,18 @@
   }
 
   .small-image {
-    height: 40px;
+    height: 30px;
+    background-color: white;
+    padding: 3px;
   }
 
+  a:hover {
+    text-decoration: none !important;
+  }
+
+  .more-info img {
+    margin: 5px;
+  }
   .fb-page {
     position: absolute !important;
     right: 0;
@@ -174,6 +207,27 @@
   }
   .fb_iframe_widget {
     display: inline-block;
+  }
+
+  #signature {
+    font-size: 10px;
+    color: white;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 10px;
+
+    a {
+      color: #e8e896;
+      opacity: 0.7;
+      &:hover {
+        text-decoration: none;
+        color: #e8e896;
+        opacity: 0.7;
+      }
+
+
+    }
+
   }
 }
 
@@ -269,7 +323,7 @@
     font-size: 23px;
   }
 
-  #opening-info {
+  .opening-info {
     color: $green;
     overflow-wrap: break-word;
     margin: auto;

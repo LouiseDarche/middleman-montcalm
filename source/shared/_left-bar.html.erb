@@ -2,50 +2,52 @@
   <!-- <div class="banner-content"> -->
     <h1 class="not-visible">Montcalm, cuisine et cave à vins - Paris 18ème</h1>
     <div class="central-part">
-      <%= image_tag('tampon-montcalm-titre-ok.png', width: "100%") %>
+      <%= image_tag 'tampon-montcalm-titre-ok.png', :width => "90%", :alt => "logo Montcalm", :id => "logo" %>
       <!-- <div class="green-line"></div> -->
       <div class="white-line"></div>
       <div class="presentation">
-        <p class="white shadow">cuisine</p>
-        <p class="white shadow">&</p>
-        <p class="white shadow">cave</p>
+        <p class="white shadow bigger">cuisine & cave</p>
+        <p class="white opening-info smaller">ouvert du mardi au samedi<br>midi et soir</p>
+        <!-- <p class="white shadow">&</p>
+        <p class="white shadow">cave</p> -->
       </div>
 <!--       <div class="green-line"></div>
  -->
       <div class="white-line"></div>
-      <div class="information">
-        <p class="white">21 rue Montcalm 75018 Paris</p>
-        <p class="white" id="opening-info">ouvert du mardi au samedi, midi et soir</p>
+      <div class="information flex-column-center">
+        <p class="white opening-info shadow bigger">21 rue montcalm<br>75018 paris</p>
       </div>
       <!-- <div class="green-line hidden-on-mobile"></div> -->
       <div class="white-line hidden-on-mobile"></div>
       <div class="information hidden-on-mobile">
         <p class="white bigger shadow">réservations :</p>
         <p class="white smaller">( 10h - 16h // 19h - 23h )</p>
-        <p class="white">01 42 58 71 35</p>
+        <p class="white no-bottom-margin">01 42 58 71 35</p>
         <a href="#" id="fb-msg">
-          ou par Facebook
+          ou par facebook
         </a>
       </div>
 <!--       <div class="green-line hidden-on-mobile"></div>
- -->      <div class="white-line hidden-on-mobile"></div>
+ -->      <div class="white-line hidden-on-mobile" id="under-fb-link"></div>
       <div class="about-us shadow hidden-on-mobile">
-        <p class="white bigger">Ils parlent de nous</p>
-        <a href="https://restaurant.michelin.fr/3615756/montcalm-paris-18" target="_blank"><img alt="Montcalm restaurant - Guide Michelin 2018" src="images/guide-michelin.jpg" class="small-image"/></a>
-        <a href="http://www.lebey.com/fr/les-adresses/bistrot/montcalm" target="_blank"><img alt="Montcalm restaurant - Guide Lebey 2018" src="images/guide-lebey.jpeg" class="small-image"/></a>
+        <p class="white bigger">mieux nous connaître</p>
+        <div class="more-info">
+          <% link_to 'https://www.facebook.com/pg/montcalmrestaurant/', :class => 'hidden-on-mobile', :id => 'facebook', :target => '_blank' do %>
+            <%= image_tag 'facebook-blanc.png', :height => '25' %>
+          <% end %>
+          <% link_to 'https://www.instagram.com/montcalm_restaurant/', :class => 'hidden-on-mobile', :id => 'instagram', :target => '_blank' do %>
+            <%= image_tag 'instagram-blanc.png', :height => '25' %>
+          <% end %>
+          <% link_to 'https://restaurant.michelin.fr/3615756/montcalm-paris-18', :target => '_blank' do %>
+            <%= image_tag 'logo-LGM.png', :alt => "Montcalm restaurant - Guide Michelin 2019", :class => "small-image" %>
+          <% end %>
+
+        </div>
       </div>
-<!--       <div class="green-line hidden-on-mobile"></div>
- -->      <div class="white-line hidden-on-mobile"></div>
-      <div class="links hidden-on-mobile">
-        <a href="https://www.facebook.com/pg/montcalmrestaurant/" class= "hidden-on-mobile" id="facebook" target="_blank">
-          <!-- <i class="fab fa-facebook-f"></i> -->
-          <%= image_tag('facebook-blanc.png', height: 40) %>
-        </a>
-        <a href="https://www.instagram.com/montcalm_restaurant/" class= "hidden-on-mobile" id="instagram" target="_blank">
-          <%= image_tag('instagram-blanc.png', height: 40) %>
-          <!-- <i class="fab fa-instagram"></i> -->
-        </a>
-      </div>
+
+    </div>
+    <div id="signature">
+      Site réalisé par <%= link_to 'The Darche Side', '#' %>
     </div>
 </div>
 
